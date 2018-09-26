@@ -2,10 +2,13 @@ int lm1 = 2;
 int lm2 = 3;
 int rm1 = 4;
 int rm2 = 5;
+int ENLeft = 9;
+int ENRight = 10;
+
 int sensorPin = A0;
 int sensorData;
-boolean freeze=false;
-int mainThreshold=600;
+boolean freeze = false;
+int mainThreshold = 600;
 
 void setup() {
 
@@ -13,6 +16,13 @@ void setup() {
   pinMode(lm2, OUTPUT);
   pinMode(rm1, OUTPUT);
   pinMode(rm2, OUTPUT);
+  pinMode(ENLeft, OUTPUT);
+  pinMode(ENRight, OUTPUT);
+
+  analogWrite(ENLeft, 100);
+  analogWrite(ENRight, 100);
+
+  
   Serial.begin(9600);
 }
 
